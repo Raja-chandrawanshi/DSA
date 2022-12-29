@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /* @Description - Find the first Duplicate element.
+     * 
+     * step 1 - Take an array.
+     * step 2 -pick the first element and compare it to the rest of the element.
+     * step 3-during comparision change  element into lower case.
+     * step 4-print first duplicate value and stop the loop.
+     
+      */
+  let arr = ["a", "d", "s", "A", "t", "d", "s"];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j].toLowerCase()) {
+        console.log(arr[i]);
+      }
+    }
+    break;
+  }
+</script>
