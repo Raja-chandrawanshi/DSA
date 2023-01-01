@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /**  @Description- Check the number of occurrence of a character in string.
+   *
+   * step 1-first assign the string in a variable.
+   * step 2 -pick first element and compare with adjacent element.
+   * step 3- if element is same than count every round.
+   * step4-if value is not same than add character,count and result.
+   * step 5-And in the last store all value.
+   */
+
+  let str = "AAAABBBDAAABB";
+  let count = 1;
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      count = count + 1;
+    } else {
+      result = result + count + str[i];
+      count = 1;
+    }
+  }
+  console.log(result);
+</script>

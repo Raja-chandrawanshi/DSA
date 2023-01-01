@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  /** @Description - Find intersection of two arrays
+   *
+   * step1 - pass two array in function arr1,arr2.
+   * step2- take one empty array arr3.
+   * step3- compare value of  arr1 and arr2  and push the similar value in arr3.
+   * step4 -but in case any value already present in arr3 dont push that value in arr3.
+   * step5-So now all the comman value of arr1 and arr3 will be store in arr3.
+   */
+
+  function intersection(arr1, arr2) {
+    let arr3 = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr1[i] === arr2[j]) {
+          if (!arr3.includes(arr1[i])) {
+            arr3.push(arr1[i]);
+          }
+        }
+      }
+    }
+    return arr3;
+  }
+  let a = [1, 3, 1, 5, 4, 8, 2, 3];
+  let b = [1, 3, 6, 7, 3, 2, 1];
+
+  console.log(intersection(a, b));
+</script>
