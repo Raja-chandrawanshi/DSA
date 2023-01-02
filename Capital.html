@@ -1,0 +1,32 @@
+<!--
+    @description - {Method to convert string into capitilize}
+*
+* step 1 - Take user input,define a variable
+* step 2 - split the input into array using space
+* step 3 - Iterate the splitted array
+* step 4 - Get the first Character and convert into an array
+* step 5 - Get the rest character and convert it into lower case
+* step 6 - Joined 5 & 6 and append into result ==> result = result+Fchar+Rchar+" "
+* step 7 - return the result
+//
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  const text = "my name is ankit jain.i am from software domain";
+  const splittext = text.split(" ");
+  for (let i = 0; i < splittext.length; i++) {
+    splittext[i] = splittext[i][0].toUpperCase() + splittext[i].substr(1);
+  }
+  console.log(splittext.join(" "));
+</script>
