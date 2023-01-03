@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+     //Question 1
+  let inputOne = [
+    {
+      name: "John",
+      age: 13,
+    },
+    {
+      name: "Mark",
+      age: 56,
+    },
+    {
+      name: "Rachel",
+      age: 45,
+    },
+    {
+      name: "Nate",
+      age: 67,
+    },
+    {
+      name: "Jeniffer",
+      age: 65,
+    },
+  ];
+  let arr1 = [];
+  let output1 = inputOne.filter((data) => {
+    if (data.age > 60) {
+      arr1.push(data.age);
+    }
+  });
+  console.log("line 41:", arr1);
+
+  // Question 2
+
+  const inputTwo = "Every developer likes to mix kubernetes and javascript";
+  let arr2 = [];
+  let arr3 = inputTwo.split(" ").map((data) => {
+    if (data.length > 3) {
+      let output1 =
+        data.charAt(0) + (data.length - 2) + data.charAt(data.length - 1);
+      arr2.push(output1);
+    } else {
+      let output2 = data;
+      arr2.push(output2);
+    }
+  });
+  let str = arr2.join(" ");
+  console.log("Line 65: ", str);
+
+  // Question 3
+
+  const inputThree = [
+    {
+      username: "john",
+      team: "red",
+      score: 5,
+      items: ["ball", "book", "pen"],
+    },
+    {
+      username: "becky",
+      team: "blue",
+      score: 10,
+      items: ["tape", "backpack", "pen"],
+    },
+    {
+      username: "susy",
+      team: "red",
+      score: 55,
+      items: ["ball", "eraser", "pen"],
+    },
+    {
+      username: "tyson",
+      team: "green",
+      score: 1,
+      items: ["book", "pen"],
+    },
+  ];
+  let output4 = inputThree.map(
+    (data) =>
+      "hello" +
+      " " +
+      data.username.charAt(0).toUpperCase() +
+      data.username.slice(1)
+  );
+  console.log(output4);
+
+  let output5 = inputThree.map((data) => data.username.length);
+  console.log(output5);
+
+  let output6 = inputThree.map((data) => data.team.length);
+  console.log(output6);
+
+  let output7 = inputThree.map(
+    (data) =>
+      "Hello" +
+      " " +
+      data.username.charAt(0).toUpperCase() +
+      data.username.slice(1) +
+      " from " +
+      " " +
+      data.team.charAt(0).toUpperCase() +
+      data.team.slice(1)
+  );
+  console.log(output7);
+
+  let output8 = inputThree.filter((data) => data.username === "susy");
+  console.log(output8);
+
+  let count = 0;
+
+  let output9 = inputThree.map((data) => {
+    count = count + data.score;
+    return count;
+  });
+  console.log(count);
+</script>
