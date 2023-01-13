@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // @ Description -Finding the first duplicate element.
+  // Step 1  -Assign the given array to variable arr and take a empty array arr1.
+  // Step 2  -Compare every single element to the rest of the element.
+  // Step 3  -Push the first element into the arr1 which is comman.
+  // Step 4  -log the arr1.
+
+  let arr = [1, 2, 3, 4, 5, 1, 9, 3];
+  let arr1 = [];
+  for (let i = 0; i <= arr.length; i++) {
+    for (let j = i + 1; j <= arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        arr1.push(arr[i]);
+      }
+    }
+    break;
+  }
+  console.log(arr1);
+</script>
