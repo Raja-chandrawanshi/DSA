@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Description -Find if two String anagram or not.
+  //step1 - Pass two string in function.
+  //step2 -First campare the length of both.
+  //step3 -Then convert it into array
+  //step4 -then arrange it into alphabetical order
+  //step5 -then convert it into string and compare both string.
+
+  function checkStringsAnagram(a, b) {
+    let len1 = a.length;
+    let len2 = b.length;
+    if (len1 !== len2) {
+      console.log("Invalid Input");
+      return;
+    }
+    let str1 = a.split("").sort().join("");
+    let str2 = b.split("").sort().join("");
+    if (str1 === str2) {
+      console.log("True");
+    } else {
+      console.log("False");
+    }
+  }
+  checkStringsAnagram("indian", "ndiani");
+</script>
