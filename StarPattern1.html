@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Description -Creatingf a star pattern
+  //*
+  //**
+  //***
+  //****
+  //*****
+
+  //step 1- fisrt crate a empty string and assign to variable RESULT.
+  //step 2 - Run a loop and store the output in result variable.
+  //step 3 - After  complition of every inner loop store output into new line
+  //step 4 -log the output.
+  function starPattern() {
+    let result = "";
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= i; j++) {
+        result += "*";
+      }
+      result += "\n";
+    }
+    return result;
+  }
+  console.log(starPattern());
+</script>
