@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // @Description - Find the longest Palindrome in a string ..
+  // Step1  - Take a string and pass it into function.
+  // step2  - Convert it into array of substrings.
+  // step3  - Iterate every element of array
+  // step3.1- in second loop run it every time  till the half of the the length of every string element.
+  // step3.2- Compare every character to it's opposite side character.
+  // step3.3-Break the loop if even one condition is not satisfy.
+  //step4   -take every palindrome and compare it  with the size of previous one
+  //step4.1 - And return the longest palindrome.
+
+  function checkPalindrome(str) {
+    let str1 = str.split(" ");
+    let blankStr = "";
+    for (let i = 0; i < str1.length; i++) {
+      for (let j = 0; j < str1[i].length / 2; j++) {
+        if (str1[i][j] != str1[i][str1[i].length - 1 - j]) {
+          break;
+        }
+
+        if (blankStr.length < str1[i].length) {
+          blankStr = str1[i];
+        }
+      }
+    }
+    return blankStr;
+  }
+  let str = "hallow madam how are you mam";
+  console.log(checkPalindrome(str));
+</script>
