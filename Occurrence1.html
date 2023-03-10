@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str = "AAACCCAABBA";
+  function checkOccurence(str) {
+    let obj = {};
+    for (let i = 0; i < str.length; i++) {
+      if (obj.hasOwnProperty(str[i])) {
+        obj[str[i]] = obj[str[i]] + 1;
+      } else {
+        obj[str[i]] = 1;
+      }
+    }
+
+    let finalstr = "";
+    for (key in obj) {
+      finalstr = finalstr + key + obj[key];
+    }
+    return finalstr;
+  }
+  console.log(checkOccurence(str)); //Is mathod me character ka order change ho sakta he so iske set mathod se kar sajte he.
+
+  // Second way
+  let str1 = "AAACCCAABBA";
+  function checkOccurence1(str) {
+    let obj1 = new Map();
+    for (let i = 0; i < str1.length; i++) {
+      if (obj1.has(str1[i])) {
+        obj1.set(str[i], obj1.get(str1[i]) + 1);
+      } else {
+        obj1.set(str1[i], 1);
+      }
+    }
+
+    let finalstr1 = "";
+    for ([key, value] of obj1) {
+      finalstr1 = finalstr1 + key + value;
+    }
+
+    return finalstr1;
+  }
+  console.log(checkOccurence1(str1));
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //new Map orignal order ko change nahi karta
+  let str = ["a", "b", "a", "d", "c"];
+  const map = new Map();
+  for (let i = 0; i < str.length; i++) {
+    map.set(str[i], "test");
+  }
+
+  //   console.log(map.Join("")); new Map me join mathod kam nahi karta
+  for ([key, value] of map) {
+    document.write(key + "");
+  }
+</script>
