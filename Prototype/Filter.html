@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  Array.prototype.myFilter = function (data) {
+    console.log(data);
+    let output = [];
+    for (let i = 0; i < this.length; i++) {
+      if (data(this[i])) {
+        output.push(this[i]);
+      }
+    }
+    return output;
+  };
+  let arr = [1, 2, 3, 4, 5];
+  let filter = arr.myFilter((data) => data > 2);
+  console.log(filter);
+</script>

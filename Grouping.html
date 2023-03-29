@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //@Description-
+  //Step1-Create a function and pass array as a input
+  //Step2-Run two loop till arr.length
+  //Step3-and Compare ever Element from rest of the element
+  //Step4-if prodB value is same bitween two object thean merge  the object
+  //Step5-We will also run anather obj "obj2"to check the repetion of object
+  //Step6-return the output
+  let arr = [
+    { prodA: ["bike", "scooter"], prodB: "itemA" },
+    { prodA: ["utensils", "washing machine"], prodB: "itemB" },
+    { prodA: ["car", "train"], prodB: "itemA" },
+    { prodA: ["sofa-set", "clothes"], prodB: "itemB" },
+  ];
+  let arr2 = [];
+  let obj2 = {};
+  // console.log(arr[1].prodB === "itemA");
+  // let arr1 = [];
+  // console.log({ prodA: [...arr[0].prodA, ...arr[2].prodA], prodB: "itemA" });
+  // console.log({ ...{ name: "raja" }, ...{ name1: "mohit" } });
+  // console.log({
+  //   ...{ prodA: ["car", "train"], prodB: "itemA" },
+  //   ...{ prodA: ["bike", "scooter"], prodB: "itemA" },
+  // });
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    const current = arr[i];
+
+    if (obj2.hasOwnProperty(current.prodB)) {
+      continue;
+    }
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i].prodB === arr[j].prodB) {
+        current.prodA = current.prodA.concat(arr[j].prodA);
+        console.log(current.prodA);
+      }
+    }
+    obj2[current.prodB] = true;
+    console.log(current);
+    arr2.push(current);
+  }
+  console.log(arr2);
+</script>

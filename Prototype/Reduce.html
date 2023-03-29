@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  Array.prototype.theReduce = function (cb, initialValue) {
+    let accumulator = initialValue;
+    for (i = 0; i < this.length; i++) {
+      accumulator = accumulator ? cb(accumulator, this[i], i, this) : this[i];
+    }
+    return accumulator;
+  };
+  let arr1 = [1, 2, 3, 4, 5];
+  let sum = arr1.theReduce((acc, curr) => {
+    acc = acc + curr;
+    return acc;
+  }, 0);
+  console.log(sum);
+</script>

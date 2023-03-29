@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = {
+    name: "satyam",
+    getDetails: function (city) {
+      return this.name + " " + city;
+    },
+  };
+  obj2 = {
+    name: "Sam",
+  };
+
+  Function.prototype.myCall = function (ob, args) {
+    let meth;
+    ob.meth = this;
+    return ob.meth(...args);
+  };
+  console.log(obj.getDetails.myCall(obj2, ["jbp", "indore"]));
+</script>

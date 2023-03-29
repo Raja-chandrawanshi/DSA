@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   function removeCommanElement(data1, data2) {
+  //     let data3 = [];
+
+  //     for (let i = 0; i < data1.length; i++) {
+  //       for (let j = 0; j < data2.length; j++) {
+  //         console.log(data1[i], data2[j]);
+  //         if (data1[i] === data2[j]) {
+  //           break;
+  //         } else if (j === data2.length - 1) {
+  //           data3.push(data1[i]);
+  //         }
+  //       }
+  //       //console.log("data1:",data1[i]);
+  //     }
+
+  //     return data3;
+  //   }
+  //   let arr1 = [1, 2, 3, 4, 5];
+  //   let arr2 = [2, 3, 4];
+  //   console.log(removeCommanElement(arr1, arr2));
+  let obj_01 = {};
+  let res = [];
+  function extractUnique(arr_01, arr_02) {
+    arr_01.forEach((el) => {
+      // if (!obj_01.hasOwnProperty(el)) {
+      obj_01[el] = el;
+      //  }
+    });
+
+    arr_02.forEach((ot) => {
+      if (!obj_01.hasOwnProperty(ot)) {
+        console.log("Array : -", !obj_01.hasOwnProperty(ot));
+        res.push(ot);
+      }
+    });
+    // console.log(res);
+  }
+  extractUnique([1, 2, 3, 4, 5], [2, 3, 4]);
+</script>

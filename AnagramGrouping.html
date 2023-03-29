@@ -11,44 +11,37 @@
 <script>
   // @Description - Grouping of an Anagram.
 
-  //Step1- Take a function and pass the input as a variable "arr".
-  //Step2- Take Variable obj={},arr1=[],arr2=[].
-  //Step3- Run two loop and compare indivisual element with rest of the element.
-  //Step4- Compare two element by => arr[i].split("").sort().join("") .
-  //Step5- If both element is anagram then update the "obj"with arr[i],arr]j and push elemet into arr1 & then push the arr1 into arr2
-  //Step6-In every outer loop condtion arr1=[]
-  //step7-Return the output.
-
+  //Step1-
   let obj = {};
-
+  let arr1 = [];
+  let arr2 = [];
   function checkAnagram(arr) {
-    let result = [];
     for (let i = 0; i < arr.length; i++) {
-      let arr1 = [arr[i]];
-      let ModifiedKey = arr[i].split("").sort().join("");
-      obj[ModifiedKey] = 1;
-
-      for (let j = i + 1; j < arr.length; j++) {
-        if (
-          arr[i].split("").sort().join("") ===
-            arr[j].split("").sort().join("") &&
-          !obj.hasOwnProperty(arr[j].split("").sort().join(""))
-        ) {
-          // if (!obj.hasOwnProperty(arr[i])) {
-          //   arr1.push(arr[i]);
-          // }
-          // obj[arr[i]] = 1;
-          // obj[arr[j]] = 1;
-
-          arr1.push(arr[j]);
-        }
-        result.push(arr1);
+      arr1 = [];
+      if (obj.hasOwnProperty(arr[i])) {
+        continue;
       }
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[i].length === arr[j].length) {
+          if (
+            arr[i].split("").sort().join("") ===
+            arr[j].split("").sort().join("")
+          ) {
+            if (!obj.hasOwnProperty(arr[i])) {
+              arr1.push(arr[i]);
+            }
+            obj[arr[i]] = 1;
+            obj[arr[j]] = 1;
+
+            arr1.push(arr[j]);
+          }
+        }
+      }
+      arr2.push(arr1);
     }
 
-    return result;
+    return arr2;
   }
-
   let arr = ["bag", "gab", "foo", "abg", "oof", "ofo"];
   console.log(checkAnagram(arr));
 </script>
