@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #containar {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      text-align: center;
+    }
+    #one {
+      background-color: rgb(218, 14, 14);
+      grid-column-start: 1;
+      grid-column-end: 5;
+      height: 25vh;
+    }
+    #two {
+      background-color: rgb(42, 165, 65);
+
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 50vh;
+    }
+    #three {
+      background-color: rgb(132, 165, 42);
+      height: 50vh;
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+    #four {
+      background-color: rgb(8, 214, 221);
+      grid-column-start: 1;
+      grid-column-end: 5;
+      height: 25vh;
+    }
+  </style>
+  <body>
+    <div id="containar">
+      <div id="one">one</div>
+      <div id="two">two</div>
+      <div id="three">three</div>
+      <div id="four">four</div>
+    </div>
+  </body>
+</html>

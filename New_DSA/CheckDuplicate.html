@@ -1,0 +1,15 @@
+function CheckDuplicate(str){
+let obj={}
+for(let i=0;i<str.length;i++){
+    obj[str[i]]=true;
+}
+
+if(str.length!=Object.keys(obj).length){
+  return true;  
+}else{
+    return false
+}
+}
+
+let str="jvascript";
+console.log(CheckDuplicate(str));

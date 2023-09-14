@@ -1,0 +1,26 @@
+#container{
+  border:1px solid black;
+  width:720px;
+}
+#button{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  
+  
+
+}
+#Status{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  
+
+}
+.btn{
+  border:1px solid black;
+}
+#status1{
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+let arr = [ 11, 23, 37, 39, 55, 63, 77, 84, 93, 101, 119, 138, 156, 209, 310,
+350, 660, ]; num = 39; function binary(arr, num) { let start = 0; let end =
+arr.length - 1; while (start <= end) { let mid = parseInt((start + end) / 2); if
+(arr[mid] === num) { return mid; } if (arr[mid] > num) { end = mid - 1; } else {
+start = mid + 1; } } return "number is not Found"; } console.log(binary(arr,
+num));
