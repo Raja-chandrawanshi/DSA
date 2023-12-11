@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str = "AAABCCCCAABBA";
+  function checkOccurence(str) {
+    let obj = {};
+    for (let i = 0; i < str.length; i++) {
+      if (obj.hasOwnProperty(str[i])) {
+        obj[str[i]] = obj[str[i]] + 1;
+      } else {
+        obj[str[i]] = 1;
+      }
+    }
+
+    let finalstr = "";
+    console.log(obj);
+    for (key in obj) {
+      finalstr = finalstr + key + obj[key];
+    }
+
+    let str1 = finalstr.split("");
+    console.log(str1);
+    let str3 = "";
+    for (let i = 0; i < str1.length; i++) {
+      for (let j = 0; j < str1[i + 1]; j++) {
+        str3 = str3 + str[i];
+      }
+    }
+    console.log(str3);
+  }
+  console.log(checkOccurence(str));
+</script>
