@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function frequencySort(str) {
+    let obj = {};
+
+    for (let i = 0; i < str.length; i++) {
+      if (obj.hasOwnProperty(str[i])) {
+        console.log(str[i]);
+        continue;
+      }
+      let count = 0;
+      for (j = 0; j < str.length; j++) {
+        count++;
+      }
+      obj[str[i]] = count;
+      count = 0;
+    }
+
+    console.log(obj);
+    // for (let i in obj) {
+    //   console.log(i);
+    // }
+  }
+  frequencySort("cCaaAAbbbBBBaaaa");
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str = "AAACCCAABBA";
+  function checkOccurence(str) {
+    let obj = {};
+    for (let i = 0; i < str.length; i++) {
+      if (obj.hasOwnProperty(str[i])) {
+        obj[str[i]] = obj[str[i]] + 1;
+      } else {
+        obj[str[i]] = 1;
+      }
+    }
+
+    let finalstr = "";
+    for (key in obj) {
+      finalstr = finalstr + key + obj[key];
+    }
+    console.log("raja")
+    return finalstr;
+}
+  console.log(checkOccurence(str));  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function frequencySort(str) {
+    let obj = {};
+
+    for (let i = 0; i < str.length; i++) {
+      if (obj.hasOwnProperty(str[i])) {
+        console.log(str[i]);
+        continue;
+      }
+      let count = 0;
+      for (j = 0; j < str.length; j++) {
+        count++;
+      }
+      obj[str[i]] = count;
+      count = 0;
+    }
+
+    console.log(obj);
+    // for (let i in obj) {
+    //   console.log(i);
+    // }
+  }
+  frequencySort("cCaaAAbbbBBBaaaa");
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function frequencySort(str) {
+    let obj = {};
+    let objCheck = {};
+
+    for (let i = 0; i < str.length; i++) {
+      if (objCheck.hasOwnProperty(str[i])) {
+        continue;
+      }
+
+      let count = 0;
+      for (j = 0; j < str.length; j++) {
+        if (str[i] == str[j]) {
+          count++;
+        }
+      }
+      objCheck[str[i]] = true;
+
+      obj[str[i]] = count;
+    }
+    console.log(obj);
+  }
+  frequencySort("cCaaAAbbbBBBaaaa");
+</script>
