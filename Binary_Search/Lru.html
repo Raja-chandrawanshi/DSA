@@ -1,0 +1,394 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          console.log("raja");
+        } else {
+          if (!obj.has(b)) {
+            obj.set(b, c);
+            console.log(obj);
+          }
+        }
+      }
+    };
+  }
+  let x = Tryme(5);
+  console.log(x(3, 2));
+  console.log(x(1, 2));
+  console.log(x(5, 2));
+  console.log(x(7, 2));
+  console.log(x(9, 2));
+  console.log(x(8, 2));
+
+  // console.log(x(1, 2));
+
+  //console.log(x(3, 2));
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+          } else {
+            obj.delete(b, c);
+            console.log(obj);
+            // obj.delete(obj.keys())
+          }
+        } else {
+          obj.set(b, c);
+          console.log(obj.keys());
+          console.log(obj.keys());
+        }
+      }
+    };
+  }
+  let x = Tryme(2);
+
+  console.log(x(8, 7));
+  console.log(x(1, 7));
+  //console.log(x(3, 5));
+
+  console.log(obj);
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          console.log(obj);
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+            return obj;
+            //console.log(obj);
+          } else {
+            for (let i of obj.keys()) {
+              //console.log(i);
+              if (i) {
+                obj.delete(i);
+                break;
+              }
+            }
+            obj.set(b, c);
+            return obj;
+          }
+        } else {
+       }
+      }
+    };
+  }
+  let x = Tryme(2);
+
+  console.log(x(8, 7));
+  console.log(x(5, 7));
+  //   console.log(x(6, 7));
+ 
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          console.log(obj);
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+            return obj;
+            //console.log(obj);
+          } else {
+            for (let i of obj.keys()) {
+              //console.log(i);
+              if (i) {
+                obj.delete(i);
+                break;
+              }
+            }
+            obj.set(b, c);
+            return obj;
+          }
+        } else {
+          obj.set(b, c);
+          return obj;
+        }
+      }
+    };
+  }
+  let x = Tryme(2);
+
+  console.log(x(8, 7));
+  console.log(x(5, 7));
+  console.log(x(3, 7));
+  console.log(x(3, 5));
+  //   console.log(x(6, 7));
+</script> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          console.log(obj);
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+            // return obj;
+          } else {
+            for (let i of obj.keys()) {
+              if (i) {
+                obj.delete(i);
+                break;
+              }
+            }
+            obj.set(b, c);
+            // return obj;
+          }
+          return obj;
+        } else {
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+          } else {
+            obj.set(b, c);
+          }
+          return obj;
+        }
+      }
+    };
+  }
+  let x = Tryme(2);
+
+  console.log(x(8, 7));
+  console.log(x(2, 2));
+  console.log(x(4, 2));
+  console.log(x(4, 1));
+  // console.log(x(3, 5));
+  //  console.log(x(3, 7));
+  //   console.log(x(6, 7));
+</script> -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          console.log(obj);
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+            // return obj;
+          } else {
+            for (let i of obj.keys()) {
+              if (i) {
+                obj.delete(i);
+                break;
+              }
+            }
+            obj.set(b, c);
+            // return obj;
+          }
+          return obj;
+        } else {
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+          } else {
+            obj.set(b, c);
+          }
+          return obj;
+        }
+      }
+    };
+  }
+  let x = Tryme(2);
+
+  console.log(x(8, 7));
+  console.log(x(2, 2));
+  console.log(x(4, 2));
+  console.log(x(4, 1));
+  // console.log(x(3, 5));
+  //  console.log(x(3, 7));
+  //   console.log(x(6, 7));
+</script>-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</ti
+
+<script>
+  var gharKiBahu = "Rani Baby";
+
+  function roopeshKaPariwar() {
+    // console.log("This: ", this);
+    // console.log("Roopesh ke pariwar nazar me: This.bahu : ", this.gharKiBahu);
+
+    // function khudRoopesh() {
+    //   console.log("Roopesh ki nazar me: This.bahu : ", this.gharKiBahu);
+    // }
+    // let aaa = () => {
+    //   const roopeshKeBhaiya = () => {
+    //     console.log(
+    //       "roopeshKeBhaiya ki nazar me: This.bahu : ",
+    //       this.gharKiBahu
+    //     );
+    //   };
+    //console.log(this.gharKiBahu);
+
+    //   //khudRoopesh();
+    let aaa = () => {
+      console.log(this.gharKiBahu);
+    };
+    aaa();
+    //   roopeshKeBhaiya();
+    // };
+    // aaa();
+  }
+
+  roopeshKaPariwar.call({ gharKiBahu: "Roopa Baby" });
+  // roopeshKaPariwar();
+  // <script/>
+  //   <!DOCTYPE html>
+  //   <html lang="en">
+  //     <head>
+  //       <meta charset="UTF-8" />
+  //       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  //       <title>Document</title>
+  //     </head>
+  //     <body></body>
+  //   </html>
+  //   <script>
+  //     // let obj = {
+  //     //   nam: "raja",
+  //     //   try: function () {
+  //     //     let aaa = () => {
+  //     //       console.log(this);
+  //     //     };
+  //     //     aaa();
+  //     //   },
+  //     // };
+  //     // obj.try();
+  //    +
+  //
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let obj = new Map();
+  function Tryme(a) {
+    return function Tryme1(b, c) {
+      if (b && c) {
+        if (obj.size == a) {
+          console.log(obj);
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+            // return obj;
+          } else {
+            for (let i of obj.keys()) {
+              if (i) {
+                obj.delete(i);
+                break;
+              }
+            }
+            obj.set(b, c);
+            // return obj;
+          }
+          return obj;
+        } else {
+          if (obj.has(b)) {
+            obj.delete(b);
+            obj.set(b, c);
+          } else {
+            obj.set(b, c);
+          }
+          return obj;
+        }
+      }
+    };
+  }
+  let x = Tryme(2);
+
+  console.log(x(8, 7));
+  console.log(x(2, 2));
+  console.log(x(4, 2));
+  console.log(x(4, 1));
+  // console.log(x(3, 5));
+  //  console.log(x(3, 7));
+  //   console.log(x(6, 7));
+</script>
