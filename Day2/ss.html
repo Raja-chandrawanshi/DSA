@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //Question2 -String reverse without using inbuild mathod
+
+  let str = "myyyuyy name issssssddddd khannnnnnn";
+  function reverseString(str) {
+    let store = "";
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+      store = store + str[i];
+
+      if (str[i] == " " || i == str.length - 1) {
+        arr.push(store);
+        store = "";
+      }
+    }
+    let greater = "";
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].length > greater.length) {
+        greater = arr[i];
+      }
+    }
+    return greater;
+  }
+  console.log(reverseString(str));
+</script>
