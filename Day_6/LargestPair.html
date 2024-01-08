@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let arr = [31, 5, -17, 4, 1, 3, 2, 6, 4, 1, 1, 8, 20, 19, 21];
+  console.log(largestpair(arr));
+  function largestpair(arr) {
+    let max = arr[0];
+    let Smax = arr[1];
+    if (Smax > max) {
+      max = arr[1];
+      Smax = arr[0];
+    }
+
+    for (let i = 2; i < arr.length; i++) {
+      if (arr[i] > max) {
+        Smax = max;
+        max = arr[i];
+      } else if (arr[i] > Smax && max < Smax) {
+        max = arr[i];
+      } else if (arr[i] < max && arr[i] > Smax) {
+        Smax = arr[i];
+      }
+    }
+    console.log(max, Smax);
+  }
+</script>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let arr = [5, 17, 4, 1, 3, 2, 6, 4, 1, 1, 8, 20, 19, 21, 31];
+  console.log(largestpair(arr));
+  function largestpair(arr) {
+    let max = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > max) {
+        Smax = max;
+        max = arr[i];
+      }
+    }
+    console.log(max);
+  }
+</script> -->
